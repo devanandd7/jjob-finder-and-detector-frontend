@@ -134,16 +134,15 @@ const SplinePreview = () => {
 
       {/* Basic styling for the container to ensure the viewer takes up space */}
       <style>{`
-        body { margin: 0; overflow: hidden; }
-        html, body, #root { height: 100%; width: 100%; }
-        /* Custom Tailwind duration for 1500ms */
-        .duration-1500 {
-          transition-duration: 1.5s;
-        }
-        .duration-700 {
-            transition-duration: 0.7s;
-        }
-      `}</style>
+  body { margin: 0; } /* Removed overflow: hidden */
+  html, body, #root { height: 100%; width: 100%; }
+  .duration-1500 {
+    transition-duration: 1.5s;
+  }
+  .duration-700 {
+    transition-duration: 0.7s;
+  }
+`}</style>
     </div>
   );
 };

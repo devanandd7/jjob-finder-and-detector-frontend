@@ -7,18 +7,20 @@ import SplinePreview from './SplinePreview'
 const All = () => {
   return (
     <div className="w-full min-h-screen">
-      {/* Example Navbar usage */}
       <Navbar />
 
       <div className="flex flex-col w-full">
+        {/* First section: full screen, centered */}
         <div className="h-screen w-full flex items-center justify-center bg-blue-600 text-white text-4xl font-bold">
           <SplinePreviewTwo />
         </div>
-        <div className="h-screen w-full flex items-center justify-center bg-red-600 text-white text-4xl font-bold">
-       <seccondPage />
+        {/* Second section: dynamic height, grows with content */}
+        <div className="w-full bg-red-600 text-white text-4xl font-bold">
+          <SecondPage />
         </div>
-        <div className="h-screen w-full flex items-center justify-center bg-green-600 text-white text-4xl font-bold">
-          {/* <SplinePreview /> */}
+        {/* Third section: at least full screen, grows if needed */}
+        <div className="min-h-screen w-full bg-green-600 text-white text-4xl font-bold">
+          <SplinePreview />
         </div>
       </div>
     </div>
