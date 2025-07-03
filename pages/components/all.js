@@ -4,6 +4,9 @@ import SecondPage from './secondpage2'
 import Page3 from './page3'
 import Page4 from './page4'
 import Intro from './intro'
+import TextCarouselPage from './crousal'
+import CardRevealPage from './cardanime'
+import ImageTextRevealPage from './image3d'
 
 const SplinePreviewTwo = lazy(() => import('./SplinePreviewTwo'))
 const SplinePreview = lazy(() => import('./SplinePreview'))
@@ -38,14 +41,15 @@ const All = () => {
         <div className="w-full bg-red-600 text-white text-4xl font-bold">
           <SecondPage />
         </div>
+        <TextCarouselPage />
         <div className="min-h-screen w-full bg-green-600 text-white text-4xl font-bold">
           <Suspense fallback={<div>Loading 3D...</div>}>
-            <Page3 />
+            <CardRevealPage />
           </Suspense>
         </div>
         <div className="min-h-screen w-full bg-green-600 text-white text-4xl font-bold">
           <Suspense fallback={<div>Loading 3D...</div>}>
-            <Page4 />
+            <ImageTextRevealPage />
           </Suspense>
         </div>
         <div className="min-h-screen w-full bg-green-600 text-white text-4xl font-bold">
