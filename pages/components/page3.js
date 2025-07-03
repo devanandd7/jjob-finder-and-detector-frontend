@@ -407,8 +407,8 @@ const BranchRevealPage = ({ setCurrentPage }) => {
                         ${branch.positionClass}
                         ${isInteractiveAreaHovered // If interactive area is hovered
                           ? (activeBranches.includes(branch.id) // And this specific branch is active
-                            ? 'opacity-100 text-white' // Fully visible, white text
-                            : 'opacity-30 text-gray-400') // Dimmed, gray text
+                            ? 'opacity-100 text-white text-7xl font-bold' // Fully visible, white text
+                            : 'opacity-30 text-gray-400 text-7xl') // Dimmed, gray text
                           : 'opacity-0 text-gray-400' // Not hovered over interactive area: fully hidden
                         }
                         `}

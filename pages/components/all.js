@@ -1,11 +1,31 @@
-import React, { lazy, Suspense } from 'react'
+import React, { lazy, Suspense, useState, useEffect } from 'react'
 import Navbar from './navbar'
 import SecondPage from './secondpage2'
+import Page3 from './page3'
+import Page4 from './page4'
+import Intro from './intro'
 
 const SplinePreviewTwo = lazy(() => import('./SplinePreviewTwo'))
 const SplinePreview = lazy(() => import('./SplinePreview'))
 
 const All = () => {
+  const [showIntro, setShowIntro] = useState(true)
+
+  useEffect(() => {
+    if (showIntro) {
+      const timer = setTimeout(() => setShowIntro(false), 7000)
+      return () => clearTimeout(timer)
+    }
+  }, [showIntro])
+
+  if (showIntro) {
+    return (
+      <div className="w-full min-h-screen bg-black text-white flex items-center justify-center">
+        <Intro />
+      </div>
+    )
+  }
+
   return (
     <div className="w-full min-h-screen">
       <Navbar />
@@ -17,6 +37,16 @@ const All = () => {
         </div>
         <div className="w-full bg-red-600 text-white text-4xl font-bold">
           <SecondPage />
+        </div>
+        <div className="min-h-screen w-full bg-green-600 text-white text-4xl font-bold">
+          <Suspense fallback={<div>Loading 3D...</div>}>
+            <Page3 />
+          </Suspense>
+        </div>
+        <div className="min-h-screen w-full bg-green-600 text-white text-4xl font-bold">
+          <Suspense fallback={<div>Loading 3D...</div>}>
+            <Page4 />
+          </Suspense>
         </div>
         <div className="min-h-screen w-full bg-green-600 text-white text-4xl font-bold">
           <Suspense fallback={<div>Loading 3D...</div>}>

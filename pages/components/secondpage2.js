@@ -46,13 +46,11 @@ const ThreeDTransformsPage = ({ setCurrentPage }) => {
         <div
           className={`w-full md:w-1/2 flex justify-center md:justify-start p-4`} // Removed animation classes from here
         >
-          <div className="relative w-64 h-96 md:w-80 md:h-[450px] overflow-hidden rounded-lg shadow-xl border-4 border-gray-700 flex items-center justify-center bg-gray-800">
+          <div className="relative w-80 h-[500px] md:w-[28rem] md:h-[600px] overflow-hidden rounded-lg shadow-xl border-4 border-gray-700 flex items-center justify-center bg-gray-800">
             <img
-              src="https://placehold.co/400x550/3B82F6/FFFFFF?text=Resume+Image" // Dummy resume image
-              alt="Resume Placeholder"
-              className={`
-                w-full h-full object-contain
-              `}
+              src="/devanand resume image.png" // <-- Replace with your actual image path or URL
+              alt="Devanand Utkarsh Resume"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>
