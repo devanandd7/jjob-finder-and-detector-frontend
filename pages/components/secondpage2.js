@@ -44,7 +44,7 @@ const ThreeDTransformsPage = ({ setCurrentPage }) => {
       <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl gap-8">
         {/* Image Section (simulating a resume) with object-fit: contain */}
         <div
-          className={`w-full md:w-1/2 flex justify-center md:justify-start p-4 ${isVisible ? 'animate-slide-in-left delay-400' : 'opacity-0'}`} // Apply animation to image container
+          className={`w-full md:w-1/2 flex justify-center md:justify-start p-4`} // Removed animation classes from here
         >
           <div className="relative w-64 h-96 md:w-80 md:h-[450px] overflow-hidden rounded-lg shadow-xl border-4 border-gray-700 flex items-center justify-center bg-gray-800">
             <img
